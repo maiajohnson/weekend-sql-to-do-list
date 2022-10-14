@@ -11,5 +11,5 @@
 
 [ ] Add styling elements in CSS
 
-[ ] Create database in Postico
-    [ ] store info in database.sql file
+[X] Create database in Postico
+    [X] store info in database.sql file

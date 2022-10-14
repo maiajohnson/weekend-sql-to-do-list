@@ -2,12 +2,13 @@ DROP TABLE IF EXISTS "todo";
 
 CREATE TABLE "todo" (
     "id" serial primary key,
-    "task_name" varchar not null,
-    "completion_status" BOOLEAN DEFAULT FALSE
+    "taskname" varchar not null,
+    "completionstatus" BOOLEAN DEFAULT FALSE
 );
 
-INSERT INTO "todo" ("task_name")
+INSERT INTO "todo" ("taskname")
 VALUES
 ('Vacumn the floors'),
 ('Dust the bookshelves'),
 ('Clean the bathrooms');
+

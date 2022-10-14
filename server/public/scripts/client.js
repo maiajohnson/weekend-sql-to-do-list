@@ -41,5 +41,27 @@ function getTasks() {
     })
         .then(function (response) {
             console.log('GET /todo response', response);
-        })
+            renderTasks(response);
+        });
 }
+
+function renderTasks(tasks) {
+    $('#taskList').empty();
+
+    for (let item of tasks) {
+
+        $('#taskList').append(`
+        <tr>
+            <td>${item.taskname}</td>
+           
+        </tr>
+        `);
+    }
+}
+
+// <td>
+// <button class="completeBtn" data-id=${task.id}>Complete Task</button>            
+// </td>
+// <td>
+// <button class="deleteBtn" data-id=${task.id}>Delete</button>           
+// </td>

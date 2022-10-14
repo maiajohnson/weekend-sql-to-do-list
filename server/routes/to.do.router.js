@@ -20,9 +20,9 @@ toDoRouter.get('/', (req, res) => {
 toDoRouter.post('/', (req, res) => {
     let newToDo = req.body;
 
-    let sqlText = `INSERT INTO "todo" ("task_name")
-                    VALUES $1;`;
-    pool.query(sqlText, [newToDo])
+    let sqlText = `INSERT INTO "todo" ("taskname")
+                    VALUES ($1);`;
+    pool.query(sqlText, [newToDo.name])
         .then(result => {
             res.sendStatus(201);
         })

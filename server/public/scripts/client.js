@@ -10,6 +10,7 @@ function onReady() {
     getTasks();
 
     $('#taskList').on('click', '.completeBtn', markComplete);
+    $('#taskList').on('click', '.deleteBtn', deleteTask);
 };
 
 function handleSubmit() {
@@ -58,7 +59,9 @@ function renderTasks(tasks) {
             <td>
             <button class="completeBtn" data-id=${item.id}>Complete Task</button>            
             </td>
-           
+            <td>
+            <button class="deleteBtn" data-id=${item.id}>Delete</button>           
+            </td>
         </tr>
         `);
     }
@@ -80,6 +83,20 @@ function markComplete() {
         })
 };
 
-{/* <td>
-<button class="deleteBtn" data-id=${task.id}>Delete</button>           
-</td> */}
+function deleteTask() {
+    let taskId = $(this).data('id');
+    console.log('deleting task', taskId);
+
+    $.ajax({
+        method: "DELETE",
+        url: `/todo/${taskId}`,
+    })
+        .then(function (response) {
+            console.log('the task was deleted');
+            getTasks();
+        })
+        .catch((err) => {
+            console.log('error on delete', err);
+        })
+};
+

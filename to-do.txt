@@ -4,7 +4,7 @@
 
 [ ] Create Complete marker (PUT Request)
     [ ] if checked, the task needs to be visually changed in DOM
-    [ ] change needs to be stored in database as well
+    [X] change needs to be stored in database as well
 
 [ ] Create Delete button (DELETE Request)
     [ ] deletes from both front end and database

@@ -2,8 +2,8 @@
     [X] Show task on DOM
     [X] Store task in database
 
-[ ] Create Complete marker (PUT Request)
-    [ ] if checked, the task needs to be visually changed in DOM
+[X] Create Complete marker (PUT Request)
+    [X] if checked, the task needs to be visually changed in DOM
     [X] change needs to be stored in database as well
 
 [X] Create Delete button (DELETE Request)

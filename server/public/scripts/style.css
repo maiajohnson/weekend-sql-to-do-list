@@ -1,3 +1,16 @@
-.green {
-    background-color: green;
+body {
+    background-color: sienna;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+};
+
+h1 {
+    margin-left: 70px;
 }
+
+#taskIn {
+    margin-bottom: 20px;
+    margin-left: 35px;
+}
+table {
+    text-align: center;
+};

@@ -6,8 +6,8 @@
     [ ] if checked, the task needs to be visually changed in DOM
     [X] change needs to be stored in database as well
 
-[ ] Create Delete button (DELETE Request)
-    [ ] deletes from both front end and database
+[X] Create Delete button (DELETE Request)
+    [X] deletes from both front end and database
 
 [ ] Add styling elements in CSS
 

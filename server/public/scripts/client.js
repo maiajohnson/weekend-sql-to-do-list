@@ -52,12 +52,13 @@ function renderTasks(tasks) {
     $('#taskList').empty();
 
     for (let item of tasks) {
-
+        const todoClass = item.completionstatus ? 'strikethrough' : '';
+        const buttonText = item.completionstatus ? 'Complete' : 'Incomplete';
         $('#taskList').append(`
-        <tr>
+        <tr class="${todoClass}">
             <td>${item.taskname}</td>
             <td>
-            <button class="completeBtn" data-id=${item.id}>Complete Task</button>            
+            <button class="completeBtn" data-id=${item.id}>${buttonText}</button>            
             </td>
             <td>
             <button class="deleteBtn" data-id=${item.id}>Delete</button>           
@@ -66,6 +67,7 @@ function renderTasks(tasks) {
         `);
     }
 }
+
 
 function markComplete() {
     let taskId = $(this).data('id');
@@ -81,6 +83,7 @@ function markComplete() {
         .catch((error) => {
             console.log('error updating tasks', error);
         })
+    
 };
 
 function deleteTask() {

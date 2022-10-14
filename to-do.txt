@@ -1,0 +1,15 @@
+[ ] Create a task (POST and GET Requests)
+    [ ] Show task on DOM
+    [ ] Store task in database
+
+[ ] Create Complete marker (PUT Request)
+    [ ] if checked, the task needs to be visually changed in DOM
+    [ ] change needs to be stored in database as well
+
+[ ] Create Delete button (DELETE Request)
+    [ ] deletes from both front end and database
+
+[ ] Add styling elements in CSS
+
+[ ] Create database in Postico
+    [ ] store info in database.sql file

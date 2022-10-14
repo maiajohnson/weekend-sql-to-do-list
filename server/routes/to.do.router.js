@@ -33,7 +33,27 @@ toDoRouter.post('/', (req, res) => {
 });
 
 // PUT
+toDoRouter.put('/:id', (req, res) => {
+    const taskId = req.params.id;
 
+    console.log('PUT request', req.params.id);
+
+    let sqlText = `UPDATE "todo"
+                    SET "completionstatus" = TRUE
+                    WHERE "id" = $1;`;
+
+    const sqlParams = [taskId];
+
+    pool
+        .query(sqlText, sqlParams)
+        .then((dbRes) => {
+            res.sendStatus(200);
+        })
+        .catch((err) => {
+            console.log('PUT request error', err);
+            res.sendStatus(500);
+        });
+});
 
 // DELETE
 

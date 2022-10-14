@@ -8,6 +8,8 @@ function onReady() {
     $('#addButton').on('click', handleSubmit);
 
     getTasks();
+
+    $('#taskList').on('click', '.completeBtn', markComplete);
 };
 
 function handleSubmit() {
@@ -53,15 +55,31 @@ function renderTasks(tasks) {
         $('#taskList').append(`
         <tr>
             <td>${item.taskname}</td>
+            <td>
+            <button class="completeBtn" data-id=${item.id}>Complete Task</button>            
+            </td>
            
         </tr>
         `);
     }
 }
 
-// <td>
-// <button class="completeBtn" data-id=${task.id}>Complete Task</button>            
-// </td>
-// <td>
-// <button class="deleteBtn" data-id=${task.id}>Delete</button>           
-// </td>
+function markComplete() {
+    let taskId = $(this).data('id');
+
+    $.ajax({
+        method: 'PUT',
+        url: `/todo/${taskId}`,
+    })
+        .then(function (response) {
+            console.log('the task is updated');
+            getTasks();
+        })
+        .catch((error) => {
+            console.log('error updating tasks', error);
+        })
+};
+
+{/* <td>
+<button class="deleteBtn" data-id=${task.id}>Delete</button>           
+</td> */}

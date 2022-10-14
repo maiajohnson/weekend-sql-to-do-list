@@ -1,6 +1,6 @@
-[ ] Create a task (POST and GET Requests)
-    [ ] Show task on DOM
-    [ ] Store task in database
+[X] Create a task (POST and GET Requests)
+    [X] Show task on DOM
+    [X] Store task in database
 
 [ ] Create Complete marker (PUT Request)
     [ ] if checked, the task needs to be visually changed in DOM

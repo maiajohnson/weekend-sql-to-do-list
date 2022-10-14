@@ -9,7 +9,7 @@
 [X] Create Delete button (DELETE Request)
     [X] deletes from both front end and database
 
-[ ] Add styling elements in CSS
+[X] Add styling elements in CSS
 
 [X] Create database in Postico
     [X] store info in database.sql file
